@@ -142,4 +142,12 @@ public class StructAcceuil extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    void setjBconnexionVisible(boolean b) {
+        jBconnexion.setVisible(b);
+    }
+
+    void setjBinscireVisible(boolean b) {
+        jBinscrire.setVisible(b);
+    }
 }

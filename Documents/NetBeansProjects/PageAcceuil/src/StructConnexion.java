@@ -174,6 +174,8 @@ public class StructConnexion extends javax.swing.JFrame {
     private void jBvaliderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBvaliderActionPerformed
         // TODO add your handling code here:
         StructAcceuil acceuil = new StructAcceuil();
+        acceuil.setjBconnexionVisible(false) ;
+        acceuil.setjBinscireVisible(false) ;
         acceuil.show();
         dispose();
     }//GEN-LAST:event_jBvaliderActionPerformed
@@ -218,4 +220,8 @@ public class StructConnexion extends javax.swing.JFrame {
     private javax.swing.JTextPane jTemail;
     private javax.swing.JTextPane jTmotpass;
     // End of variables declaration//GEN-END:variables
+
+    void setJbconnexionVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

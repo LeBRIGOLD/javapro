@@ -1,3 +1,6 @@
+
+import java.util.Arrays;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -19,6 +22,7 @@ public class StructInscription extends javax.swing.JFrame {
     public String prenom;
     public String email;
     public char [] motpasse;
+    
     
     public StructInscription() {
         initComponents();
@@ -184,12 +188,15 @@ public class StructInscription extends javax.swing.JFrame {
         prenom = jTprenom.getText();
         email = jTemail.getText();
         
-        if (jPconfirmer.getPassword() == jPmotpasse.getPassword()){
+        if (Arrays.equals(jPconfirmer.getPassword(),jPmotpasse.getPassword())){
             motpasse = jPmotpasse.getPassword();
         
-        StructConnexion Pageconn = new StructConnexion();
         
-        Pageconn.show();
+        
+        StructAcceuil acceuil = new StructAcceuil();
+        acceuil.setjBconnexionVisible(false) ;
+        acceuil.setjBinscireVisible(false) ;
+        acceuil.show();
         dispose();
         } else {
             
