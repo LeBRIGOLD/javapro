@@ -186,6 +186,11 @@ public class StructInscription extends javax.swing.JFrame {
         
         if (jPconfirmer.getPassword() == jPmotpasse.getPassword()){
             motpasse = jPmotpasse.getPassword();
+        
+        StructConnexion Pageconn = new StructConnexion();
+        
+        Pageconn.show();
+        dispose();
         } else {
             
         }
