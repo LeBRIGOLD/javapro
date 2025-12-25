@@ -68,6 +68,7 @@ public class StructInscription extends javax.swing.JFrame {
         jBretour.setBackground(new java.awt.Color(255, 51, 51));
         jBretour.setForeground(new java.awt.Color(255, 255, 255));
         jBretour.setText("Retour");
+        jBretour.addActionListener(this::jBretourActionPerformed);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -162,6 +163,13 @@ public class StructInscription extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jBretourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBretourActionPerformed
+        // TODO add your handling code here:
+        StructAcceuil acceuil = new StructAcceuil();
+        acceuil.show();
+        dispose();
+    }//GEN-LAST:event_jBretourActionPerformed
 
     /**
      * @param args the command line arguments
