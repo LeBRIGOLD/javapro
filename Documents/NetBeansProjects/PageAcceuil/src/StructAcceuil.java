@@ -7,14 +7,14 @@
  *
  * @author ELITEBOOK
  */
-public class StructAccceuil extends javax.swing.JFrame {
+public class StructAcceuil extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(StructAccceuil.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(StructAcceuil.class.getName());
 
     /**
      * Creates new form StructAccceuil
      */
-    public StructAccceuil() {
+    public StructAcceuil() {
         initComponents();
     }
 
@@ -130,7 +130,7 @@ public class StructAccceuil extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new StructAccceuil().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new StructAcceuil().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -53,10 +53,10 @@ public class StructInscription extends javax.swing.JFrame {
         jLabel2.setText("Prénoms          :");
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("email               :");
+        jLabel3.setText("Email               :");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("mot de passe  :");
+        jLabel4.setText("Mot de passe  :");
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Confirmer        :");
