@@ -14,6 +14,12 @@ public class StructInscription extends javax.swing.JFrame {
     /**
      * Creates new form StructInscription
      */
+    
+    public String nom;
+    public String prenom;
+    public String email;
+    public char [] motpasse;
+    
     public StructInscription() {
         initComponents();
     }
@@ -33,11 +39,11 @@ public class StructInscription extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        jTnom = new javax.swing.JTextField();
+        jTprenom = new javax.swing.JTextField();
+        jTemail = new javax.swing.JTextField();
+        jPmotpasse = new javax.swing.JPasswordField();
+        jPconfirmer = new javax.swing.JPasswordField();
         jBretour = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jBvalider = new javax.swing.JButton();
@@ -61,9 +67,9 @@ public class StructInscription extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Confirmer        :");
 
-        jTextField1.addActionListener(this::jTextField1ActionPerformed);
+        jTnom.addActionListener(this::jTnomActionPerformed);
 
-        jTextField2.addActionListener(this::jTextField2ActionPerformed);
+        jTprenom.addActionListener(this::jTprenomActionPerformed);
 
         jBretour.setBackground(new java.awt.Color(255, 51, 51));
         jBretour.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,6 +82,7 @@ public class StructInscription extends javax.swing.JFrame {
         jLabel6.setText("INSCRIPTION");
 
         jBvalider.setText("Valider");
+        jBvalider.addActionListener(this::jBvaliderActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -93,11 +100,11 @@ public class StructInscription extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPasswordField2))
+                            .addComponent(jPmotpasse, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                            .addComponent(jTemail, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTprenom, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTnom, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPconfirmer))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -117,23 +124,23 @@ public class StructInscription extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTprenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPmotpasse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPconfirmer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(59, 59, 59)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -156,13 +163,13 @@ public class StructInscription extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTnomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTnomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTnomActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTprenomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTprenomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTprenomActionPerformed
 
     private void jBretourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBretourActionPerformed
         // TODO add your handling code here:
@@ -170,6 +177,19 @@ public class StructInscription extends javax.swing.JFrame {
         acceuil.show();
         dispose();
     }//GEN-LAST:event_jBretourActionPerformed
+
+    private void jBvaliderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBvaliderActionPerformed
+        // TODO add your handling code here:
+        nom = jTnom.getText();
+        prenom = jTprenom.getText();
+        email = jTemail.getText();
+        
+        if (jPconfirmer.getPassword() == jPmotpasse.getPassword()){
+            motpasse = jPmotpasse.getPassword();
+        } else {
+            
+        }
+    }//GEN-LAST:event_jBvaliderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,10 +226,10 @@ public class StructInscription extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JPasswordField jPconfirmer;
+    private javax.swing.JPasswordField jPmotpasse;
+    private javax.swing.JTextField jTemail;
+    private javax.swing.JTextField jTnom;
+    private javax.swing.JTextField jTprenom;
     // End of variables declaration//GEN-END:variables
 }
