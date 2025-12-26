@@ -61,7 +61,7 @@ public class StructAcceuil extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBconnexion)
                     .addComponent(jBinscrire))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -72,7 +72,7 @@ public class StructAcceuil extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 301, Short.MAX_VALUE)
+            .addGap(0, 274, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,11 +143,13 @@ public class StructAcceuil extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
+    
+    //Rendre invisible le bouton s'nscrire et connexion de la page d'acceuil après une connexion réussie.
     void setjBconnexionVisible(boolean b) {
         jBconnexion.setVisible(b);
     }
-
     void setjBinscireVisible(boolean b) {
         jBinscrire.setVisible(b);
+        
     }
 }
