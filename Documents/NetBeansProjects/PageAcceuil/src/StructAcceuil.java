@@ -1,3 +1,6 @@
+
+import javax.swing.Action;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -30,7 +33,15 @@ public class StructAcceuil extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jBconnexion = new javax.swing.JButton();
         jBinscrire = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jBcommander = new javax.swing.JButton();
+        jBhistorique = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,12 +54,18 @@ public class StructAcceuil extends javax.swing.JFrame {
         jBinscrire.setText("S'inscrire");
         jBinscrire.addActionListener(this::jBinscrireActionPerformed);
 
+        jLabel1.setFont(new java.awt.Font("Segoe Script", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("DOUDOUMENT");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(220, Short.MAX_VALUE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBinscrire)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBconnexion)
@@ -60,19 +77,103 @@ public class StructAcceuil extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBconnexion)
-                    .addComponent(jBinscrire))
-                .addContainerGap(33, Short.MAX_VALUE))
+                    .addComponent(jBinscrire)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel3.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jPanel3AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jBcommander.setText("COMMANDER");
+        jBcommander.addChangeListener(this::jBcommanderStateChanged);
+        jBcommander.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jBcommanderInputMethodTextChanged(evt);
+            }
+        });
+        jBcommander.addActionListener(this::jBcommanderActionPerformed);
+
+        jBhistorique.setText("HISTORIQUE");
+        jBhistorique.addActionListener(this::jBhistoriqueActionPerformed);
+
+        jButton3.setText("AJOUTER");
+        jButton3.addActionListener(this::jButton3ActionPerformed);
+
+        jButton4.setText("jButton1");
+        jButton4.addActionListener(this::jButton4ActionPerformed);
+
+        jButton5.setText("jButton1");
+        jButton5.addActionListener(this::jButton5ActionPerformed);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jBcommander, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5)
+                    .addComponent(jBhistorique, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jBcommander)
+                .addGap(32, 32, 32)
+                .addComponent(jBhistorique)
+                .addGap(32, 32, 32)
+                .addComponent(jButton3)
+                .addGap(32, 32, 32)
+                .addComponent(jButton4)
+                .addGap(32, 32, 32)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 506, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 397, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +212,39 @@ public class StructAcceuil extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jBconnexionPropertyChange
 
+    private void jPanel3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel3AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel3AncestorAdded
+
+    private void jBcommanderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBcommanderActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBcommanderActionPerformed
+
+    private void jBhistoriqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBhistoriqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBhistoriqueActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jBcommanderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jBcommanderStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBcommanderStateChanged
+
+    private void jBcommanderInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jBcommanderInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBcommanderInputMethodTextChanged
+
     /**
      * @param args the command line arguments
      */
@@ -135,12 +269,19 @@ public class StructAcceuil extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new StructAcceuil().setVisible(true));
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBcommander;
     private javax.swing.JButton jBconnexion;
+    private javax.swing.JButton jBhistorique;
     private javax.swing.JButton jBinscrire;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 
     
@@ -151,5 +292,13 @@ public class StructAcceuil extends javax.swing.JFrame {
     void setjBinscireVisible(boolean b) {
         jBinscrire.setVisible(b);
         
+    }
+// changer les boutons et leurs fonctions lorsqu'on se connecte en tant que 
+    void Changerbouton() {
+        
+        StructCommande commande = new StructCommande();
+        jBcommander.setAction((Action) commande);
+        
+
     }
 }
